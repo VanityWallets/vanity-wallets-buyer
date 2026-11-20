@@ -1,0 +1,38 @@
+[package]
+name = "vanity-wallets-buyer"
+version = "0.1.0"
+edition = "2021"
+description = "Vanity Wallets Buyer: split-key vanity wallet assembly; private keys never leave the computer"
+
+[[bin]]
+name = "VanityWalletsBuyer"
+path = "src/main.rs"
+
+[dependencies]
+secp256k1 = { version = "0.29", features = ["std"] }
+tiny-keccak = { version = "2.0", features = ["keccak"] }
+sha2 = "0.10"
+ripemd = "0.1"
+bech32 = "0.11"
+bs58 = { version = "0.5", features = ["check", "std"] }
+rand = "0.8"
+
+zeroize = "1"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+tao = { version = "=0.34.5", default-features = false, features = ["rwh_06"] }
+wry = { version = "=0.53.5", default-features = false, features = ["protocol"] }
+arboard = { version = "3.6", default-features = false }
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.58", features = ["Win32_Foundation", "Win32_System_Com", "Win32_UI_Shell", "Win32_UI_Shell_Common", "Win32_System_Diagnostics_Debug", "Win32_System_Kernel", "Win32_System_Threading", "Win32_Security", "Win32_UI_WindowsAndMessaging"] }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
+debug = 0

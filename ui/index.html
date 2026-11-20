@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Vanity Wallets Buyer</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="frame">
+  <header id="titlebar">
+    <div class="brand" id="drag-brand"><img src="logo.png" alt="V"><span class="name">anity Wallets Buyer</span></div>
+    <div class="drag" id="drag"></div>
+    <div class="seg" id="lang"><button data-ru="0" type="button">EN</button><button data-ru="1" type="button">RU</button></div>
+    <div class="winbtns">
+      <button type="button" id="w-min" class="winbtn" aria-label="Minimize"><svg width="11" height="11" viewBox="0 0 12 12"><path d="M1 6h10"/></svg></button>
+      <button type="button" id="w-max" class="winbtn" aria-label="Maximize"><svg width="11" height="11" viewBox="0 0 12 12" id="w-max-icon"><rect x="1.5" y="1.5" width="9" height="9"/></svg></button>
+      <button type="button" id="w-close" class="winbtn close" aria-label="Close"><svg width="11" height="11" viewBox="0 0 12 12"><path d="M1.5 1.5l9 9M10.5 1.5l-9 9"/></svg></button>
+    </div>
+  </header>
+  <nav id="steps"></nav>
+  <div id="body">
+    <aside id="orders"></aside>
+    <main id="main"></main>
+    <aside id="inspector"></aside>
+  </div>
+</div>
+<div class="edge n" data-dir="n"></div><div class="edge s" data-dir="s"></div>
+<div class="edge e" data-dir="e"></div><div class="edge w" data-dir="w"></div>
+<div class="edge ne" data-dir="ne"></div><div class="edge nw" data-dir="nw"></div>
+<div class="edge se" data-dir="se"></div><div class="edge sw" data-dir="sw"></div>
+<script src="app.js"></script>
+</body>
+</html>
