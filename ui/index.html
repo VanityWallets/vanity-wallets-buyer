@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Vanity Wallets Buyer</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="frame">
+  <header id="titlebar">
+    <img class="logo" src="logo.png" alt="V">
+    <button type="button" id="menuBtn" class="menubtn"><span id="menuLabel"></span><svg class="chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div id="stepper" class="stepper fadable"></div>
+    <div class="tb-space"></div>
+    <div class="lang" id="lang"><i class="lang-k"></i><button data-ru="1" type="button">RU</button><button data-ru="0" type="button">EN</button></div>
+    <div class="winbtns">
+      <button type="button" id="w-min" class="winbtn" aria-label="Minimize"><svg viewBox="0 0 12 12"><path d="M1 6h10"/></svg></button>
+      <button type="button" id="w-max" class="winbtn" aria-label="Maximize"><svg viewBox="0 0 12 12"><rect x="1.5" y="1.5" width="9" height="9" rx="1.5"/></svg></button>
+      <button type="button" id="w-close" class="winbtn close" aria-label="Close"><svg viewBox="0 0 12 12"><path d="M1.5 1.5l9 9M10.5 1.5l-9 9"/></svg></button>
+    </div>
+  </header>
+  <main id="main" class="fadable"></main>
+  <footer id="foot" class="fadable"></footer>
+</div>
+<div id="layer"></div>
+<div class="edge n" data-dir="n"></div><div class="edge s" data-dir="s"></div>
+<div class="edge e" data-dir="e"></div><div class="edge w" data-dir="w"></div>
+<div class="edge ne" data-dir="ne"></div><div class="edge nw" data-dir="nw"></div>
+<div class="edge se" data-dir="se"></div><div class="edge sw" data-dir="sw"></div>
+<script src="app.js"></script>
+</body>
+</html>
